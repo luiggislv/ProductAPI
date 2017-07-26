@@ -1,0 +1,4 @@
+python == 3.5.2
+flask == 0.10.1-2build2
+flask-sqlalchemy == 1.0-3
+sqlite3 == 3.11.0
