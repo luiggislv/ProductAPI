@@ -29,9 +29,13 @@ def list_product():
 @app.route("/product/list_filterby/<string:category_filter>", methods=["GET"])
 def list_filterby(category_filter):
     x = Product.query.filter(Product.category == category_filter).all()
-    print(x.toString())
+    items = []
+    for item in x:
+        items.append(
+            {"id": item.id, "name": item.name, "description": item.description, "category": item.category, "price": item.price }
+        )
     return jsonify({
-        "items": [{"id": x.id, "name": x.name, "description": x.description, "category": x.category, "price": x.price}]
+        "items": [items]
     }), 200
 
 @app.route("/product/list_product/<int:id>/", methods=["GET"])

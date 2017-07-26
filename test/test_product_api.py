@@ -2,6 +2,7 @@ import unittest
 import requests
 import json
 
+
 class TestFlaskApiUsingRequests(unittest.TestCase):
 
     def test_create_product(self):
