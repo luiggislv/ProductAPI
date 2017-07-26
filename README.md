@@ -18,7 +18,7 @@ sudo apt-get install python3-flask-sqlalchemy
 
 ### Services
 
-`Create a new Product - POST`
+``Create a new Product - POST``
 `http://localhost:3000/product/new_product`
 
 `List Product - GET`
