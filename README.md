@@ -9,26 +9,23 @@
 ```
 sudo pip install -r requirements.txt
 ```
-
 ### Run server
 
 `python3 server.py`
 
-
 ### Services
 
-
-`http://localhost:3000/product`
+```http://localhost:3000/product```
 
 `List Products - GET`
 
 `Register Products - POST`
 
-`http://localhost:3000/product?category='<string:category>'`
+```http://localhost:3000/product?category='<string:category>'```
 
 `List Products by category  - GET`
 
-`http://localhost:3000/product/list_filterby/<int:id`
+```http://localhost:3000/product/list_filterby/<int:id>```
 
 `Get Product by Id - GET`
 
@@ -36,7 +33,7 @@ sudo pip install -r requirements.txt
 
 `Delete Product by Id - DELETE`
 
-`http://localhost:3000/product/list_product/<string:name>`
+```http://localhost:3000/product/list_product/<string:name>```
 
 `Get Product by Name - GET`
 
