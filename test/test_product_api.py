@@ -1,22 +1,16 @@
 import unittest
 import requests
 import json
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-
+import os,sys,inspect
+currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0,parentdir)
+from product_api import db
+from product_api.models import Product
 
 class appTests(unittest.TestCase):
 
     def setUp(self):
-        app = Flask(__name__)
-        app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/product.db'
-        db = SQLAlchemy(app)
-        class Product(db.Model):
-            id = db.Column(db.Integer, primary_key=True)
-            name = db.Column(db.String(100), unique=False)
-            description = db.Column(db.String(100), unique=False)
-            category = db.Column(db.String(100), unique=False)
-            price = db.Column(db.String(100), unique=False)
         db.drop_all()
         db.create_all()
         product_test1 = Product(name="Asus_K557",description="Laptop Asus Model K557",category="Laptops",price="$1200")
@@ -86,15 +80,6 @@ class appTests(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
     def tearDown(self):
-        app = Flask(__name__)
-        app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/product.db'
-        db = SQLAlchemy(app)
-        class Product(db.Model):
-            id = db.Column(db.Integer, primary_key=True)
-            name = db.Column(db.String(100), unique=False)
-            description = db.Column(db.String(100), unique=False)
-            category = db.Column(db.String(100), unique=False)
-            price = db.Column(db.String(100), unique=False)
         db.drop_all()
         db.session.remove()
 
