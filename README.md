@@ -7,8 +7,7 @@
 ### Install Required
 
 ```
-sudo pip3 install flask
-sudo apt-get install python3-flask-sqlalchemy
+sudo pip install -r requirements.txt
 ```
 
 ### Run server
@@ -18,23 +17,27 @@ sudo apt-get install python3-flask-sqlalchemy
 
 ### Services
 
-``Create a new Product - POST``
-`http://localhost:3000/product/new_product`
 
-`List Product - GET`
-`http://localhost:3000/product/list_product`
+`http://localhost:3000/product`
 
-`List Product filtered by category - GET`
-`http://localhost:3000/product/list_filterby/<string:category_filter>`
+`List Products - GET`
+`Register Products - POST`
 
-`Find Product by ID - GET`
-`http://localhost:3000/product/list_product/<int:id>`
+`http://localhost:3000/product?category='<string:category>'`
 
-`Update Product by ID - PUT`
-`http://localhost:3000/product/update/<int:id>`
+`List Products by category  - GET`
 
-`Delete Product by ID - DELETE`
-`http://localhost:3000/product/delete/<int:id>`
+`http://localhost:3000/product/list_filterby/<int:id`
+
+`Get Product by Id - GET`
+`Update Product by Id - PUT`
+`Delete Product by Id - DELETE`
+
+`http://localhost:3000/product/list_product/<string:name>`
+
+`Get Product by Name - GET`
+`Update Product by Name - PUT`
+`Delete Product by Name - DELETE`
 
 ### Run Test
 
