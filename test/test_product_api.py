@@ -21,12 +21,7 @@ class appTests(unittest.TestCase):
 
     def test_create_product(self):
         url = "http://localhost:3000/product"
-        product = {
-            'name': 'Asus_K559',
-            'description': 'Laptop Asus Model K559',
-            'category': 'Technology',
-            'price': '$1200'
-        }
+        product = {'name': 'Asus_K559', 'description': 'Laptop Asus Model K559', 'category': 'Technology', 'price': '$1200'}
         headers = { 'content-type': "application/json" }
         response = requests.request("POST", url, data=json.dumps(product), headers=headers)
         self.assertEqual(response.status_code, 201)
