@@ -7,3 +7,4 @@ class Product(db.Model):
     description = db.Column(db.String(100), unique=False)
     category = db.Column(db.String(100), unique=False)
     price = db.Column(db.String(100), unique=False)
+ 
