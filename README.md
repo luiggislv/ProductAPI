@@ -31,13 +31,17 @@ sudo pip install -r requirements.txt
 `http://localhost:3000/product/list_filterby/<int:id`
 
 `Get Product by Id - GET`
+
 `Update Product by Id - PUT`
+
 `Delete Product by Id - DELETE`
 
 `http://localhost:3000/product/list_product/<string:name>`
 
 `Get Product by Name - GET`
+
 `Update Product by Name - PUT`
+
 `Delete Product by Name - DELETE`
 
 ### Run Test
