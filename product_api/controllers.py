@@ -18,7 +18,7 @@ def new_product():
     db.session.add(new_product)
     db.session.commit()
     return jsonify({"id": new_product.id}), 201
- 
+
 @app.route("/product", methods=["GET"])
 def list_product():
     category = request.args.get('category')

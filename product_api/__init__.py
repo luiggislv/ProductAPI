@@ -4,4 +4,4 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/product.db'
-db = SQLAlchemy(app) 
+db = SQLAlchemy(app)
