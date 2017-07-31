@@ -45,12 +45,7 @@ class appTests(unittest.TestCase):
 
     def test_update_product_byId(self):
         url = "http://localhost:3000/product/1"
-        product = {
-            'name': 'Asus_K557',
-            'description': 'Laptop Asus Model K557',
-            'category': 'Laptops',
-            'price': '$1300'
-        }
+        product = {'name': 'Asus_K557', 'description': 'Laptop Asus Model K557', 'category': 'Laptops', 'price': '$1300'}
         headers = { 'content-type': "application/json" }
         response = requests.request("PUT", url, data=json.dumps(product), headers=headers)
         self.assertEqual(response.status_code, 200)
@@ -65,12 +60,7 @@ class appTests(unittest.TestCase):
 
     def test_update_product_byName(self):
         url = "http://localhost:3000/product/Asus_K558"
-        product = {
-            'name': 'Asus_K558',
-            'description': 'Laptop Asus Model K558',
-            'category': 'Laptops',
-            'price': '$2800'
-        }
+        product = {'name': 'Asus_K558', 'description': 'Laptop Asus Model K558', 'category': 'Laptops', 'price': '$2800'}
         headers = { 'content-type': "application/json" }
         response = requests.request("PUT", url, data=json.dumps(product), headers=headers)
         self.assertEqual(response.status_code, 200)
