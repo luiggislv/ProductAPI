@@ -20,8 +20,8 @@ sudo pip install -r requirements.txt
 
 `http://localhost:3000/product`
 
-`List Products - GET`
-`Register Products - POST`
+``List Products - GET``
+``Register Products - POST``
 
 `http://localhost:3000/product?category='<string:category>'`
 
