@@ -8,6 +8,7 @@ sys.path.insert(0,parentdir)
 from product_api import db
 from product_api.models import Product
 
+
 class appTests(unittest.TestCase):
 
     def setUp(self):
