@@ -15,7 +15,9 @@ sudo pip install -r requirements.txt
 
 ### Services
 
-```http://localhost:3000/product```
+```
+http://localhost:3000/product
+```
 
 `List Products - GET`
 
